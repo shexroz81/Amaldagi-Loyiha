@@ -1,0 +1,52 @@
+[
+  {
+    "logo": "Progressus",
+    "logoImg": "./images/logo.png",
+    "link1": "Home",
+    "link2": "About",
+    "link3": "Contact",
+    "link4": "Blog",
+    "link5": "Services",
+    "link6": "Sign Up / Sign In"
+  },
+  {
+    "title": "AWESOME, CUSTOMIZABLE, FREE",
+    "description": "PROGRESSUS: free business bootstrap template by GetTemplates",
+    "btnText": "More Info",
+    "btnLink": "Download Now"
+  },
+  {
+    "mainTitle": "The Best Place To Tell People Why They are here",
+    "descriptions": "The Differemce between involvement and commitment is like an-eggs-ham breakfast the chicken was involved in the breakfast  the pig was committed ",
+    "title": "Reason to use this template",
+    "icon1": "fa-solid fa-gears",
+    "icon2": "fa-solid fa-bolt",
+    "icon3": "fa-solid fa-heart",
+    "icon4": "fa-regular fa-face-smile"
+  },
+  {
+    "title": "Frequently Asked Questions",
+    "descriptionOne": "Which Code editor would you recommend",
+    "descriptionTwo": "Nice Header. Where do I find more images like that one ?",
+    "descriptionThree": "Can I use it to build a website for my business ?",
+    "descriptionFour": "Can I customize this template for me?"
+  },
+  {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    "btn": "Learn More"
+  },
+  {
+    "contactTitle": "Contact",
+    "phone": "+123 456 7890",
+    "email": "info@example.com",
+    "address": "123 Main St, City, State",
+    "followTitle": "Follow Me",
+    "twitter": "Twitter",
+    "google": "Google+",
+    "rss": "Instagram",
+    "facebook": "Facebook",
+    "widgetTitle": "Text Widget",
+    "widgetText1": "This is a sample text widget. You can add any text you want here and customize it as needed.",
+    "widgetText2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]
