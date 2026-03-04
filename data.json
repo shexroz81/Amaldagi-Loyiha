@@ -1,7 +1,7 @@
 [
   {
     "logo": "Progressus",
-    "logoImg": "./JSON APP/images/logo.png",
+    "logoImg": "./images/logo.png",
     "link1": "Home",
     "link2": "About",
     "link3": "Contact",
