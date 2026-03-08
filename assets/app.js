@@ -2,7 +2,18 @@ fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     class Navbar {
-      constructor(logo, src, link1, link2, link3, link4, link5, link6) {
+      constructor(
+        logo,
+        src,
+        link1,
+        link2,
+        link3,
+        link4,
+        link5,
+        link6,
+        barIcon,
+        xBtn,
+      ) {
         this.logo = logo;
         this.link1 = link1;
         this.link2 = link2;
@@ -11,6 +22,8 @@ fetch("../data.json")
         this.link5 = link5;
         this.link6 = link6;
         this.src = src;
+        this.barIcon = barIcon;
+        this.xBtn = xBtn;
       }
 
       render() {
@@ -25,9 +38,37 @@ fetch("../data.json")
             <a href="#" class="nav-link">${this.link3}</a>
             <a href="#" class="nav-link">${this.link4}</a>
             <a href="#" class="nav-link">${this.link5}</a>
-            <a href="#" class="nav-link last-link">${this.link6}</a>
+            <a href="./sign.html" class="nav-link last-link">${this.link6}</a>
           </nav>
+          <i class="${this.barIcon}" id="bar-icon"></i>
+          <div class="menu-container" id="menu-container">
+            <div class="menu-header">
+              <h3>Menu</h3>
+              <i class="${this.xBtn}" id="close-icon"></i>
+            </div>
+            <nav class="menu-links">
+              <a href="#" class="menu-link">${this.link1}</a>
+              <a href="#" class="menu-link">${this.link2}</a>
+              <a href="#" class="menu-link">${this.link3}</a>
+              <a href="#" class="menu-link">${this.link4}</a>
+              <a href="#" class="menu-link">${this.link5}</a>
+              <a href="./sign.html" class="menu-link last-link">${this.link6}</a>
+            </nav>
+          </div>
         `;
+
+        const barIcon = document.getElementById("bar-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const menuContainer = document.getElementById("menu-container");
+
+        barIcon.addEventListener("click", () => {
+          menuContainer.style.display = "block";
+        });
+
+        closeIcon.addEventListener("click", () => {
+          menuContainer.style.display = "none";
+        });
+
         return navbar;
       }
     }
@@ -42,6 +83,8 @@ fetch("../data.json")
       navbarData.link4,
       navbarData.link5,
       navbarData.link6,
+      navbarData.barIcon,
+      navbarData.xBtn,
     );
     navbar.render();
 

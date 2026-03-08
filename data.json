@@ -1,13 +1,15 @@
 [
   {
     "logo": "Progressus",
-    "logoImg": "./images/logo.png",
+    "logoImg": "./assets/images/logo.png",
     "link1": "Home",
     "link2": "About",
     "link3": "Contact",
     "link4": "Blog",
     "link5": "Services",
-    "link6": "Sign Up / Sign In"
+    "link6": "Sign Up / Sign In",
+    "barIcon": "fa-solid fa-bars",
+    "xBtn": "fa-solid fa-xmark"
   },
   {
     "title": "AWESOME, CUSTOMIZABLE, FREE",
@@ -48,5 +50,12 @@
     "widgetTitle": "Text Widget",
     "widgetText1": "This is a sample text widget. You can add any text you want here and customize it as needed.",
     "widgetText2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "loginTitle": "Login",
+    "loginBtn": "Login",
+    "loginForgot": "Forgot Password?",
+    "loginRegister": "Register",
+    "eyeIcon": "fa-solid fa-eye"
   }
 ]
