@@ -1,6 +1,31 @@
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
+    // Show loader on page load
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    loaderWrapper.classList.add("active-loader");
+
+    // Hide loader after content loads
+    setTimeout(() => {
+      loaderWrapper.classList.remove("active-loader");
+    }, 500);
+
+    // Sticky header functionality
+    const header = document.querySelector("header");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100) {
+        header.classList.add("activated");
+      } else {
+        header.classList.remove("activated");
+      }
+
+      lastScrollY = currentScrollY;
+    });
+
     class Navbar {
       constructor(
         logo,
@@ -34,7 +59,7 @@ fetch("../data.json")
           </div>
           <nav class="nav-links">
             <a href="#" class="nav-link">${this.link1}</a>
-            <a href="#" class="nav-link">${this.link2}</a>
+            <a href="./about.html" class="nav-link">${this.link2}</a>
             <a href="#" class="nav-link">${this.link3}</a>
             <a href="#" class="nav-link">${this.link4}</a>
             <a href="#" class="nav-link">${this.link5}</a>

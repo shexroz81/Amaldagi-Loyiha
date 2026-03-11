@@ -1,6 +1,31 @@
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
+    // Show loader on page load
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    loaderWrapper.classList.add("active-loader");
+
+    // Hide loader after content loads
+    setTimeout(() => {
+      loaderWrapper.classList.remove("active-loader");
+    }, 1000);
+
+    // Sticky header functionality
+    const header = document.querySelector("header");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100) {
+        header.classList.add("activated");
+      } else {
+        header.classList.remove("activated");
+      }
+
+      lastScrollY = currentScrollY;
+    });
+
     class Navbar {
       constructor(
         logo,
