@@ -8,23 +8,7 @@ fetch("../data.json")
     // Hide loader after content loads
     setTimeout(() => {
       loaderWrapper.classList.remove("active-loader");
-    }, 1000);
-
-    // Sticky header functionality
-    const header = document.querySelector("header");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100) {
-        header.classList.add("activated");
-      } else {
-        header.classList.remove("activated");
-      }
-
-      lastScrollY = currentScrollY;
-    });
+    }, 500);
 
     class Navbar {
       constructor(
@@ -113,54 +97,85 @@ fetch("../data.json")
     );
     navbar.render();
 
-    class Login {
-      constructor(title, email, password, btn, forgot, register, eyeIcon) {
-        this.title = title;
-        this.email = email;
-        this.password = password;
-        this.btn = btn;
-        this.forgot = forgot;
-        this.register = register;
+    class Register {
+      constructor(
+        registerTitle,
+        registerBtn,
+        newEmail,
+        newPassword,
+        newUsername,
+        registerLogin,
+        eyeIcon,
+        registerText,
+        registerInfo,
+        modalIcon,
+      ) {
+        this.registerTitle = registerTitle;
+        this.btn = registerBtn;
+        this.newEmail = newEmail;
+        this.newPassword = newPassword;
+        this.newUsername = newUsername;
+        this.registerLogin = registerLogin;
         this.eyeIcon = eyeIcon;
+        this.registerText = registerText;
+        this.registerInfo = registerInfo;
+        this.modalIcon = modalIcon;
       }
 
       render() {
-        const login = document.querySelector(".container-login");
-        login.innerHTML = `
-        <h2>${this.title}</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter Your Email" /
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="text" id="password" placeholder="Enter Your Password" />
-            <i class="${this.eyeIcon}" id="eye-icon"></i>
-          </div>
-          <button type="submit">${this.btn}</button>
-          <div class="form-links">
-            <a href="#">${this.forgot}</a>
-            <a href="../register.html">${this.register}</a>
-          </div>
-        </form>
-      `;
-        const form = document.querySelector(".login-form");
+        const register = document.querySelector("#register-section");
+        register.innerHTML = `
+        <div class="register-container">
+          <h1>${this.registerTitle}</h1>
+          <form class="register-form">
+            <div class="form-groups">
+              <label for="email">${this.newEmail}</label>
+              <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-groups">
+              <label for="password">${this.newPassword}</label>
+              <input type="password" id="password" placeholder="Password">
+              <i class="${this.eyeIcon}" id="eye-icon"></i>
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" placeholder="Confirm Password">
+            </div>
+            <div class="form-groups">
+              <label for="username">${this.newUsername}</label>
+              <input type="text" id="username" placeholder="Username">
+            </div>
+            <button type="submit">${this.registerLogin}</button>
+            <div class="register-info">
+              <a href="./sign.html">${this.registerText}</a>
+              <p>${this.registerInfo}<span><i class="${this.modalIcon}"></i></span></p>
+            </div>
+          </form>
+        </div>
+        `;
+
+        // Form submit event listener
+        const form = document.querySelector(".register-form");
         form.addEventListener("submit", (e) => {
           e.preventDefault();
           const email = document.getElementById("email").value;
           const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
+          const username = document.getElementById("username").value;
 
-          if (!email || !password) {
+          if (!email || !password || !username || !confirmPassword) {
             alert("Please fill in all fields");
+            return;
+          } else if (password !== confirmPassword) {
+            alert("Passwords do not match");
             return;
           } else {
             const userInfo = {
               userEmail: email,
               userPassword: password,
+              userName: username,
             };
             console.log(userInfo);
-            alert("Login successful");
+            alert("Registration successful");
           }
 
           form.reset();
@@ -171,7 +186,7 @@ fetch("../data.json")
           const password = document.getElementById("password");
           if (password.type === "password") {
             password.type = "text";
-            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.remove("fa-eye-slash");
             eyeIcon.classList.add("fa-eye-slash");
           } else {
             password.type = "password";
@@ -180,20 +195,23 @@ fetch("../data.json")
           }
         });
 
-        return login;
+        return register;
       }
     }
 
-    const loginData = data[6];
-    const login = new Login(
-      loginData.loginTitle,
-      loginData.loginEmail,
-      loginData.loginPassword,
-      loginData.loginBtn,
-      loginData.loginForgot,
-      loginData.loginRegister,
-      loginData.eyeIcon,
+    const registerData = data[7];
+    const registers = new Register(
+      registerData.registerTitle,
+      registerData.registerBtn,
+      registerData.newEmail,
+      registerData.newPassword,
+      registerData.newUsername,
+      registerData.registerLogin,
+      registerData.eyeIcon,
+      registerData.registerText,
+      registerData.registerInfo,
+      registerData.modalIcon,
     );
-    login.render();
+    registers.render();
   })
   .catch((err) => console.log("Xato:", err));

@@ -10,22 +10,6 @@ fetch("../data.json")
       loaderWrapper.classList.remove("active-loader");
     }, 500);
 
-    // Sticky header functionality
-    const header = document.querySelector("header");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100) {
-        header.classList.add("activated");
-      } else {
-        header.classList.remove("activated");
-      }
-
-      lastScrollY = currentScrollY;
-    });
-
     class Navbar {
       constructor(
         logo,

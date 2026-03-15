@@ -57,5 +57,17 @@
     "loginForgot": "Forgot Password?",
     "loginRegister": "Register",
     "eyeIcon": "fa-solid fa-eye"
+  },
+  {
+    "registerTitle": "Register",
+    "registerBtn": "Register",
+    "newEmail": "New Email",
+    "newPassword": "New Password",
+    "newUsername": "New Username",
+    "registerLogin": "Login",
+    "eyeIcon": "fa-solid fa-eye",
+    "registerText": "Already have an account?",
+    "registerInfo": "You Have To Register in order to enter easy enter next time",
+    "modalIcon": "fa-regular fa-circle-question"
   }
 ]

@@ -6,6 +6,8 @@
 
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .body {
@@ -13,7 +15,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   position: relative;
 }
 
@@ -146,9 +147,50 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .register-container {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 400px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .register-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-groups {
+    gap: 0.7rem;
+  }
+
+  .form-groups label {
+    font-size: 0.9rem;
+  }
+
+  .form-groups input {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .register-form button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .register-info a {
+    font-size: 16px;
+  }
+
+  .register-info p {
+    font-size: 12px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .container-login {
     width: 95%;
     max-width: 350px;
@@ -159,6 +201,151 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .register-container {
+    width: 95%;
+    max-width: 350px;
+    height: auto;
+    min-height: 350px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .register-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-groups {
+    gap: 0.6rem;
+  }
+
+  .form-groups label {
+    font-size: 0.8rem;
+  }
+
+  .form-groups input {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .form-groups i {
+    font-size: 1rem;
+    top: 38px;
+  }
+
+  .register-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .register-info a {
+    font-size: 14px;
+  }
+
+  .register-info p {
+    font-size: 11px;
+  }
+}
+
+#register-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.register-container {
+  background: rgba(48, 46, 46, 0.45);
+  backdrop-filter: blur(5px);
+  width: 500px;
+  height: 600px;
+  padding: 20px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(7, 45, 234, 0.9);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.form-groups i {
+  position: absolute;
+  right: 15px;
+  top: 45px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.form-groups label {
+  color: white;
+  font-size: 18px;
+}
+
+.form-groups input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(200, 248, 41);
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-groups input::placeholder {
+  color: rgb(254, 253, 255);
+}
+
+.form-groups input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.register-form button {
+  background: rgb(235, 33, 33);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background: rgb(200, 27, 27);
+}
+
+.register-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-info a:hover,
+.register-info p:hover {
+  color: yellow;
+  cursor: pointer;
 }
 
 header {

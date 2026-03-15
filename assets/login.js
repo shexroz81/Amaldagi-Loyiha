@@ -10,22 +10,6 @@ fetch("../data.json")
       loaderWrapper.classList.remove("active-loader");
     }, 500);
 
-    // Sticky header functionality
-    const header = document.querySelector("header");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100) {
-        header.classList.add("activated");
-      } else {
-        header.classList.remove("activated");
-      }
-
-      lastScrollY = currentScrollY;
-    });
-
     class Navbar {
       constructor(
         logo,
@@ -156,21 +140,18 @@ fetch("../data.json")
             alert("Please fill in all fields");
             return;
           } else {
-            // Show loader
             alert("Succsesful Login");
             const loaderWrapper = document.getElementById("loader-wrapper");
             loaderWrapper.classList.add("active-loader");
 
-            // Hide loader after 1500ms
             setTimeout(() => {
               loaderWrapper.classList.remove("active-loader");
-
               const userInfo = {
                 userEmail: email,
                 userPassword: password,
               };
               console.log(userInfo);
-            }, 700);
+            }, 300);
           }
 
           form.reset();
