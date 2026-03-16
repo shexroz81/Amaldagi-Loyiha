@@ -69,5 +69,17 @@
     "registerText": "Already have an account?",
     "registerInfo": "You Have To Register in order to enter easy enter next time",
     "modalIcon": "fa-regular fa-circle-question"
+  },
+  {
+    "title": "About Us",
+    "description": "We are a team of passionate developers who love to create amazing websites and applications. We are dedicated to providing the best possible service to our clients and customers."
+  },
+  {
+    "textName": "Our Item",
+    "textDescription": "This is a sample text for our item. You can add any text you want here and customize it as needed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+  },
+  {
+    "cardTitle": "Card Title",
+    "cardDescription": "This is a sample card description. You can add any text you want here and customize it as needed."
   }
 ]
