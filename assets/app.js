@@ -42,8 +42,8 @@ fetch("../data.json")
             <img src="${this.src}" alt="">
           </div>
           <nav class="nav-links">
-            <a href="#" class="nav-link">${this.link1}</a>
-            <a href="./about.html" class="nav-link">${this.link2}</a>
+            <a href="../index.html" class="nav-link">${this.link1}</a>
+            <a href="../about.html" class="nav-link">${this.link2}</a>
             <a href="#" class="nav-link">${this.link3}</a>
             <a href="#" class="nav-link">${this.link4}</a>
             <a href="#" class="nav-link">${this.link5}</a>

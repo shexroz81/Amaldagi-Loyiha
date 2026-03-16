@@ -34,7 +34,7 @@ fetch("../data.json")
           </div>
           <nav class="nav-links">
             <a href="../index.html" class="nav-link">${this.link1}</a>
-            <a href="#" class="nav-link">${this.link2}</a>
+            <a href="../about.html" class="nav-link">${this.link2}</a>
             <a href="#" class="nav-link">${this.link3}</a>
             <a href="#" class="nav-link">${this.link4}</a>
             <a href="#" class="nav-link">${this.link5}</a>
@@ -48,7 +48,7 @@ fetch("../data.json")
             </div>
             <nav class="menu-links">
               <a href="../index.html" class="menu-link">${this.link1}</a>
-              <a href="#" class="menu-link">${this.link2}</a>
+              <a href="../about.html" class="menu-link">${this.link2}</a>
               <a href="#" class="menu-link">${this.link3}</a>
               <a href="#" class="menu-link">${this.link4}</a>
               <a href="#" class="menu-link">${this.link5}</a>
