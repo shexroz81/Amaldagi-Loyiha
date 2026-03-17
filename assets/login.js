@@ -57,11 +57,11 @@ fetch("../data.json")
             </div>
             <nav class="menu-links">
               <a href="../index.html" class="menu-link">${this.link1}</a>
-              <a href="#" class="menu-link">${this.link2}</a>
+              <a href="../about.html" class="menu-link">${this.link2}</a>
               <a href="#" class="menu-link">${this.link3}</a>
               <a href="#" class="menu-link">${this.link4}</a>
               <a href="#" class="menu-link">${this.link5}</a>
-              <a href="./sign.html" class="menu-link last-link">${this.link6}</a>
+              <a href="../sign.html" class="menu-link last-link">${this.link6}</a>
             </nav>
           </div>
         `;

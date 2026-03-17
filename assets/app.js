@@ -56,8 +56,8 @@ fetch("../data.json")
               <i class="${this.xBtn}" id="close-icon"></i>
             </div>
             <nav class="menu-links">
-              <a href="#" class="menu-link">${this.link1}</a>
-              <a href="#" class="menu-link">${this.link2}</a>
+              <a href="../index.html" class="menu-link">${this.link1}</a>
+              <a href="../about.html" class="menu-link">${this.link2}</a>
               <a href="#" class="menu-link">${this.link3}</a>
               <a href="#" class="menu-link">${this.link4}</a>
               <a href="#" class="menu-link">${this.link5}</a>
