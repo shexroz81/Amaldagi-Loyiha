@@ -195,6 +195,120 @@ fetch("../data.json")
     const card = new Card(cardData.cardTitle, cardData.cardDescription);
     card.render();
 
+    class SlideMenu {
+      constructor(slideIcon, slideTitle, slideDescription) {
+        this.slideIcon = slideIcon;
+        this.slideTitle = slideTitle;
+        this.slideDescription = slideDescription;
+      }
+      render() {
+        const slideSection = document.getElementById("slide-section");
+        slideSection.innerHTML = `
+          <div class="slide-menu">
+           <div class="carousel-track">
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+               <div class="slide">
+                 <div class="slide-content">
+                   <i class="${this.slideIcon} slide-icon"></i>
+                   <h3>${this.slideTitle}</h3>
+                   <p>${this.slideDescription}</p>
+                 </div>
+               </div>
+           </div>
+        `;
+
+        const track = document.querySelector(".carousel-track");
+
+        let currentCount = 0;
+        const slideWidth = 400;
+        const originalSlides = 8;
+
+        function nextSlide() {
+          currentCount++;
+          if (currentCount >= originalSlides) {
+            track.style.transition = "none";
+            currentCount = 0;
+            track.style.transform = `translateX(0px)`;
+
+            setTimeout(() => {
+              track.style.transition = "transform 0.5s ease-in-out";
+              currentCount = 1;
+              track.style.transform = `translateX(-${currentCount * slideWidth}px)`;
+            }, 50);
+          } else {
+            track.style.transform = `translateX(-${currentCount * slideWidth}px)`;
+          }
+        }
+
+        setInterval(nextSlide, 2000);
+
+        return slideSection;
+      }
+    }
+
+    const slideMenuData = data[11];
+    const slideMenu = new SlideMenu(
+      slideMenuData.slideIcon,
+      slideMenuData.slideTitle,
+      slideMenuData.slideDescription,
+    );
+    slideMenu.render();
+
     class Footer {
       constructor(
         contactTitle,

@@ -81,5 +81,10 @@
   {
     "cardTitle": "Card Title",
     "cardDescription": "This is a sample card description. You can add any text you want here and customize it as needed."
+  },
+  {
+    "slideIcon": "fa-solid fa-heart",
+    "slideTitle": "First-Slide",
+    "slideDescription": "This is a sample slide description. You can add any text you want here and customize it as needed."
   }
 ]

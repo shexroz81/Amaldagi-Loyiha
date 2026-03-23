@@ -258,6 +258,130 @@ body {
   }
 }
 
+#slide-section {
+  width: 100%;
+  padding: 20px;
+}
+
+.slide-menu {
+  max-width: 1200px;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(400px * 8);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-right: 2px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.slide-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slide-content h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.slide:nth-child(2n) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.slide:nth-child(3n) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.slide:nth-child(4n) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .slide-menu {
+    max-width: 1000px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-menu {
+    max-width: 800px;
+    height: 200px;
+  }
+
+  .slide {
+    min-width: 400px;
+  }
+
+  .carousel-track {
+    width: calc(400px * 16);
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-menu {
+    max-width: 400px;
+    height: 200px;
+  }
+
+  .slide {
+    min-width: 400px;
+  }
+
+  .carousel-track {
+    width: calc(400px * 16);
+  }
+
+  .slide-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .slide-content p {
+    font-size: 0.8rem;
+  }
+
+  .slide-icon {
+    font-size: 2.5rem;
+  }
+}
+
 #register-section {
   width: 100%;
   height: 100vh;
