@@ -1,3 +1,4 @@
+"use strict";
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
@@ -115,11 +116,11 @@ fetch("../data.json")
         <form class="login-form">
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter Your Email" /
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" id="password" placeholder="Enter Your Password" />
+            <input type="text" id="password" name="password" placeholder="Enter Your Password" />
             <i class="${this.eyeIcon}" id="eye-icon"></i>
           </div>
           <button type="submit" id="form-btn">${this.btn}</button>

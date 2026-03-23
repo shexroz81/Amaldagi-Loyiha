@@ -1,3 +1,4 @@
+"use strict";
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
@@ -176,6 +177,15 @@ fetch("../data.json")
             };
             console.log(userInfo);
             alert("Registration successful");
+            // Array Metodlari
+            const userMassiv = [];
+            userMassiv.push(userInfo.userEmail);
+            userMassiv.push(userInfo.userPassword);
+            userMassiv.push(userInfo.userName);
+
+            userMassiv.forEach((user) => {
+              console.log(user);
+            });
           }
 
           form.reset();
